@@ -1,0 +1,214 @@
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Efeito de Máquina de Escrever */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Container Principal */
+.chat-container {
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    height: 80vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #dd3f3f;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+h1 {
+    color: #333;
+    font-size: 1.8rem; /* Tamanho maior para leitura */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 240px; /* Aumentando um pouco o tamanho da imagem */
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+}
+
+/* Área de Chat */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Maior espaçamento entre as mensagens */
+}
+
+/* Mensagens */
+.message {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    padding: 15px 20px;
+    border-radius: 10px;
+    max-width: 85%;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem; /* Aumentando a fonte das mensagens */
+    line-height: 1.5;
+    animation: typing 1s steps(30) 1 normal forwards;
+}
+
+/* Mensagens do Usuário */
+.message.user .text {
+    background-color: #25D366;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Mensagens do Bot */
+.message.bot .text {
+    background-color: #ececec;
+    color: black;
+    align-self: flex-start;
+}
+
+/* Caixa de Entrada */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2rem; /* Aumento do tamanho da fonte no campo de entrada */
+    outline: none;
+    margin-top: 15px; /* Maior espaçamento entre o campo e o botão */
+    box-sizing: border-box;
+}
+
+/* Botão */
+button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Aumento do tamanho da fonte no botão */
+    width: 100%;
+    margin-top: 15px; /* Maior espaçamento entre o campo de entrada e o botão */
+}
+
+button:hover {
+    background-color: #128C7E;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .chat-container {
+        max-width: 85%; /* Ajuste para telas médias, mais próximo ao centro */
+    }
+
+    h1 {
+        font-size: 1.9rem; /* Aumento do título para dispositivos de tela média */
+    }
+
+    .text {
+        font-size: 1.3rem; /* Aumento das fontes das mensagens */
+    }
+
+    input[type="text"], button {
+        font-size: 1.2rem; /* Aumento do tamanho dos botões e campo de entrada */
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-container {
+        height: 85vh;
+    }
+
+    img {
+        width: 110px;
+        height: 110px; /* Ajuste da imagem para dispositivos de tamanho médio */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Aumento do título */
+    }
+
+    .chat-box {
+        padding: 20px; /* Aumento do padding na área de chat */
+    }
+
+    .text {
+        font-size: 1.3rem; /* Aumento do tamanho das mensagens */
+    }
+
+    input[type="text"] {
+        font-size: 1.3rem; /* Aumento do campo de entrada */
+        padding: 15px; /* Aumento do padding */
+    }
+
+    button {
+        font-size: 1.3rem; /* Aumento do botão */
+        padding: 15px; /* Aumento do padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        height: 90vh;
+    }
+
+    img {
+        width: 100px;
+        height: 100px; /* Ajuste da imagem para telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Tamanho ajustado para telas pequenas */
+    }
+
+    .text {
+        font-size: 1.2rem; /* Tamanho maior para facilitar a leitura */
+    }
+
+    input[type="text"] {
+        font-size: 1.2rem; /* Ajuste do campo de entrada */
+        padding: 12px;
+    }
+
+    button {
+        font-size: 1.2rem; /* Aumento do tamanho do botão */
+        padding: 12px;
+    }
+}
