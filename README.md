@@ -4,7 +4,7 @@ Bem-vindo ao **Chat de Programação para Iniciantes**! Este projeto foi criado 
 
 ## Como Funciona
 
-Este é um **chat de programação baseado na web**. Ele permite que você converse com outros iniciantes e receba dicas sobre programação enquanto aprende. Para começar a usar o chat, basta **baixar o projeto**, abrir o arquivo HTML e interagir diretamente no navegador.
+Este é um **chat de programação baseado na web**. Ele permite que você converse com chat  receba dicas sobre programação enquanto aprende. Para começar a usar o chat, basta **baixar o projeto**, abrir o arquivo HTML e interagir diretamente no navegador.
 
 ### Passos para usar:
 
